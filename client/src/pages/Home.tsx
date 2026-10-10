@@ -6,27 +6,27 @@ function ProductTabs() {
     {
       title: 'Utilidades Domésticas',
       text: 'Nossa linha de utilidades domésticas reúne produtos práticos e essenciais para o dia a dia do lar. Trabalhamos com utensílios de cozinha, organizadores, recipientes e diversos acessórios domésticos.',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663029039108/4qz7cBnPqYg8RbFi8v9k4b/kitchen-utensils-collection-9NPoHdqGzHvWry7eWJm7fC.webp',
+      image: '/images/produto-utilidades-domesticas.webp',
     },
     {
       title: 'Produtos para Banheiro',
       text: 'A linha de produtos para banheiro inclui itens essenciais para organização e higiene, como saboneteiras, porta-escovas, escovas sanitárias e organizadores. São produtos de alta demanda no varejo, ideais para lojas de utilidades e variedades.',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663029039108/4qz7cBnPqYg8RbFi8v9k4b/bathroom-products-display-NZpFA2jkqovRGrVq6HCdiJ.webp',
+      image: '/images/produto-banheiro.webp',
     },
     {
       title: 'Mochilas',
       text: 'Nossa linha de mochilas inclui modelos escolares, infantis e casuais, desenvolvidos com materiais resistentes e design moderno. São produtos com alta demanda e excelente oportunidade de revenda para lojistas.',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663029039108/4qz7cBnPqYg8RbFi8v9k4b/backpacks-collection-o8kAAr9eM5LGUJ8w3cH5Y9.webp',
+      image: '/images/produto-mochilas.webp',
     },
     {
       title: 'Garrafas',
       text: 'Trabalhamos com garrafas e recipientes para bebidas, ideais para uso doméstico, escolar e esportivo. Os produtos combinam praticidade, durabilidade e design funcional.',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663029039108/4qz7cBnPqYg8RbFi8v9k4b/water-bottles-display-jSeS2t4Kfpb88JuLWuSv4i.webp',
+      image: '/images/produto-garrafas.webp',
     },
     {
       title: 'Brinquedos',
       text: 'A linha de brinquedos reúne produtos educativos e recreativos que estimulam a diversão e a criatividade das crianças. São itens com grande apelo comercial e boa rotatividade no varejo.',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663029039108/4qz7cBnPqYg8RbFi8v9k4b/toys-collection-CZcEdVzMHcMGiSb5gocT3S.webp',
+      image: '/images/produto-brinquedos.webp',
     },
   ];
 
@@ -69,7 +69,7 @@ function ProductTabs() {
           <div
             className="min-h-[280px] md:min-h-[320px]"
             style={{
-              backgroundImage: `linear-gradient(rgba(15,23,42,0.18), rgba(15,23,42,0.38)), url(${activeProduct.image})`,
+              backgroundImage: `linear-gradient(rgba(15,23,42,0.18), rgba(15,23,42,0.38)), url(${activeProduct.image}), url('/images/caixas-e-estoques-1.avif')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
@@ -82,15 +82,15 @@ function ProductTabs() {
 
 export default function Home() {
   const transportImage =
-    'https://d2xsxph8kpxj0f.cloudfront.net/310419663029039108/4qz7cBnPqYg8RbFi8v9k4b/Transporteinternacional_aaf60727.png';
+    '/images/transporte-internacional.webp';
   const heroImage =
-    'https://d2xsxph8kpxj0f.cloudfront.net/310419663029039108/4qz7cBnPqYg8RbFi8v9k4b/hero-global-logistics-i4wAQ4qUBeA6CTMrzSNyy8.webp';
-  const truckImage =
-    'https://d2xsxph8kpxj0f.cloudfront.net/310419663029039108/4qz7cBnPqYg8RbFi8v9k4b/Caminhão_2ddefb34.png';
+    '/images/logistica-nordeste-holograma.webp';
+  const aboutImage = '/images/caixas-e-estoques-1.avif';
+  const distributionImage = '/images/caminhao-boia-flow-entregador.webp';
   const marketImage =
-    'https://d2xsxph8kpxj0f.cloudfront.net/310419663029039108/4qz7cBnPqYg8RbFi8v9k4b/logistica_nordeste_sustentavel_1fb70230.png';
+    '/images/logistica-nordeste-sustentavel.webp';
   const globalizationImage =
-    'https://d2xsxph8kpxj0f.cloudfront.net/310419663029039108/4qz7cBnPqYg8RbFi8v9k4b/globalizacao_brasil_comercio_5138bc0e.png';
+    '/images/globalizacao-brasil-comercio.webp';
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -106,9 +106,16 @@ export default function Home() {
 
       <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <div>
-            <h1 className="text-2xl font-bold tracking-tight">Boia Flow</h1>
-            <p className="text-sm text-slate-300">Importadora e distribuidora de mercadorias</p>
+          <div className="flex items-center gap-3">
+            <img
+              src="/images/boia-flow-logo.webp"
+              alt="Boia Flow"
+              className="h-12 w-16 rounded-lg object-contain"
+            />
+            <div>
+              <h1 className="text-2xl font-bold tracking-tight">Boia Flow</h1>
+              <p className="text-sm text-slate-300">Importadora e distribuidora de mercadorias</p>
+            </div>
           </div>
           <nav className="hidden gap-6 text-sm md:flex">
             <a href="#sobre" className="transition hover:text-cyan-300">A empresa</a>
@@ -199,7 +206,7 @@ A Boia Flow atua na importação e distribuição de mercadorias, conectando for
             <div
               className="min-h-[360px]"
               style={{
-                backgroundImage: `linear-gradient(rgba(15,23,42,0.25), rgba(15,23,42,0.58)), url(${heroImage})`,
+                backgroundImage: `linear-gradient(rgba(15,23,42,0.25), rgba(15,23,42,0.58)), url(${aboutImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -222,7 +229,7 @@ A Boia Flow atua na importação e distribuição de mercadorias, conectando for
               {
                 title: 'Distribuição terrestre',
                 text: 'Nossa frota reforça a entrega regional e a capilaridade necessária para abastecer comerciantes com eficiência e rapidez.',
-                image: truckImage,
+                image: distributionImage,
               },
               {
                 title: 'Globalização e rotas',
